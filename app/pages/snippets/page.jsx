@@ -1,4 +1,4 @@
-
+"use client";
 
 import { Suspense } from "react";
 import SnippetsList from "@/components/snippets/snippet-list";
