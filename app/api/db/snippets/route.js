@@ -36,11 +36,17 @@ export async function POST(req) {
       ...snippetData,
       tags: tagIds,
     });
-    return NextResponse.json({
+
+    if(snippet){
+       return NextResponse.json({
       message: 'Snippet created successfully',
       snippet: snippet,
       status: 201
     });
+    }
+    else{
+      throw new Error("Snippet Creation failed");
+    }
   } catch (error) {
     return NextResponse.json({
       error: 'Error creating snippet',
