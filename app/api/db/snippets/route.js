@@ -5,6 +5,10 @@ import { User } from '@/models/user';
 import { Comment } from '@/models/comment';
 import { NextResponse } from 'next/server';
 
+
+const knownLanguages = ['javascript', 'python', 'java', 'c', 'cpp'];
+const knownFrameworks = ['react', 'next.js', 'django', 'express', 'flask'];
+
 export async function POST(req) {
   await connection(); 
   try {
