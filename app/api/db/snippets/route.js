@@ -38,6 +38,7 @@ export async function POST(req) {
     });
 
     if(snippet){
+        console.log("Created ok");
        return NextResponse.json({
       message: 'Snippet created successfully',
       snippet: snippet,
