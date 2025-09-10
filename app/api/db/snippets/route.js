@@ -5,55 +5,12 @@ import { User } from '@/models/user';
 import { Comment } from '@/models/comment';
 import { NextResponse } from 'next/server';
 
-// const knownLanguages = [
-//   'javascript',
-//   'typescript',
-//   'python',
-//   'java',
-//   'c',
-//   'c++',
-//   'c#',
-//   'go',
-//   'ruby',
-//   'php',
-//   'swift',
-//   'kotlin',
-//   'rust',
-//   'dart',
-//   'bash',
-//   'sql',
-//   'html',
-//   'css'
-// ];
-
-// const knownFrameworks = [
-//   'react',
-//   'nextjs',
-//   'express',
-//   'vue',
-//   'angular',
-//   'django',
-//   'flask',
-//   'spring',
-//   'laravel',
-//   'rails',
-//   'fastapi',
-//   'nuxt',
-//   'svelte',
-//   'flutter',
-//   'firebase',
-//   'nestjs',
-//   'electron',
-//   'tailwind',
-//   'bootstrap',
-//   'mui'
-// ];
-
-
 export async function POST(req) {
   await connection(); 
   try {
     const body = await req.json();
+
+    console.log(body);
     const { tags: tagNames, ...snippetData } = body;
     // Process each tag
     const tagIds = await Promise.all(
