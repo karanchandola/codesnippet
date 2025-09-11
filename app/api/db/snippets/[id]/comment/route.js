@@ -26,6 +26,7 @@ export async function POST(req, context) {
       snippetId,
       userId,
       username: userDoc.username,
+      authorRep : userDoc.reputation,
       comment,
     });
 
