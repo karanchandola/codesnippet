@@ -55,7 +55,7 @@ function StatusBadge({ status }) {
 function CommentSection({ comments, onAddComment, onDeleteComment, session }) {
   const [newComment, setNewComment] = useState('');
 
-
+        console.log("comment : ",comments);
   const handleSubmit = () => {
     if (newComment.trim()) {
       onAddComment(newComment);
