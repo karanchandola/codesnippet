@@ -20,7 +20,7 @@ export async function POST(req, context) {
     if (!userDoc) {
       return NextResponse.json({ error: 'User not found', status: 404 });
     }
-    console.log('detail : ', snippetId, userId, comment, userDoc.username);
+    console.log('detail : ', snippetId, userId, comment, userDoc);
     // Create comment
     const newComment = await Comment.create({
       snippetId,
