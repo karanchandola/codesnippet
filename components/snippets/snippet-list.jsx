@@ -539,6 +539,9 @@ export default function SnippetsList() {
 
 
       // Use the comment object returned from the backend
+
+      console.log('Added comment:', res.data);
+      
       const addedComment = res.data?.comment;
       if (!addedComment) return;
 
@@ -555,7 +558,7 @@ export default function SnippetsList() {
         })
       );
     } catch (error) {
-      console.error('Error updating vote:', error);
+      console.error('Error updating comment:', error);
       // Optionally, you can handle the error by showing a notification or alert
 
     }
