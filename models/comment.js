@@ -6,13 +6,17 @@ const commentSchema = new mongoose.Schema({
     ref: 'Snippet', 
     required: true 
   },
-  userId: { 
+  authorId: { 
     type: mongoose.Schema.Types.ObjectId, 
     ref: 'user', 
     required: true
   },
-  username: { // Optional, only if you want to store username for denormalization
+  authorName: { // Optional, only if you want to store username for denormalization
     type: String,
+    required: true,
+  },
+  authorRep: {
+    type: Number,
     required: true,
   },
   comment: { 
