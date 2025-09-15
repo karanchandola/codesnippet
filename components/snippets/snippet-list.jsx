@@ -79,7 +79,7 @@ function CommentSection({ comments, onAddComment, onDeleteComment, session }) {
               <p className="text-sm">{comment.comment}</p>
               <div className="text-xs text-muted-foreground mt-1 w-full flex justify-between">
                 <div>
-                  {comment.userId?.username || comment.username} | Rep: {comment.reputation ?? 0}
+                  {comment.authorName } | Rep: {comment.authorRep ?? 0}
                 </div>
                 <div>{new Date(comment.createdAt).toLocaleDateString()}{" : "}
                   {new Date(comment.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
