@@ -24,9 +24,9 @@ export async function POST(req, context) {
     // Create comment
     const newComment = await Comment.create({
       snippetId,
-      userId,
-      username: userDoc.username,
-      authorRep : userDoc.reputation,
+      authorId: userId,
+      authorName: userDoc.username,
+      authorRep: userDoc.reputation,
       comment,
     });
 
